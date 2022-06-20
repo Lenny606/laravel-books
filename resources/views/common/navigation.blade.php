@@ -1,4 +1,21 @@
+
+@php
+$links = [
+    'homepage' => 'Home',
+    'about-us' => 'About us'
+];
+@endphp
+
+
+
 <nav>
-    <a id='#' href="{{route('homepage')}}">Home</a>
-    <a id='#' href="{{route('about-us')}}">About</a>
+    @foreach ($links as $route => $label)
+
+        @if ($current_page == $route)
+            <span>{{ $label }}</span>
+        @else
+            <a href="{{ route($route) }}">{{ $label }}</a>
+        @endif
+
+    @endforeach
 </nav>

@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutusController;
-use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\Admin\AuthorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +16,7 @@ use App\Http\Controllers\AuthorController;
 */
 
 Route::get('/', function () {
-    return view('index/index');
+    return view('index/index',[AuthorController::class, 'index']);
 })->name('homepage');
 
 Route::get('/about-us', [AboutusController::class, 'aboutUs'])->name('about-us');

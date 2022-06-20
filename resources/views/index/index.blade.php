@@ -1,6 +1,10 @@
 @extends('layouts/main', [
-    'current_page' => 'about-us'
+    'current_page' => 'homepage'
 ])
+
+@section('stylesheets')
+    <link rel="stylesheet" href="style.css">
+@endsection
 
 @section('content')
 
