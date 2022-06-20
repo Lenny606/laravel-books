@@ -17,7 +17,7 @@
     
     <input type="hidden" name="slug">
 
-    <input type="submit">
+    <input type="submit" value="Create">
     
 </form>
 
