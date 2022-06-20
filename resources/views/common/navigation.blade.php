@@ -2,7 +2,9 @@
 @php
 $links = [
     'homepage' => 'Home',
-    'about-us' => 'About us'
+    'about-us' => 'About us',
+    'create' => "Create"
+
 ];
 @endphp
 
@@ -15,6 +17,7 @@ $links = [
             <span>{{ $label }}</span>
         @else
             <a href="{{ route($route) }}">{{ $label }}</a>
+            
         @endif
 
     @endforeach

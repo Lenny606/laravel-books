@@ -20,4 +20,6 @@ Route::get('/', function () {
 })->name('homepage');
 
 Route::get('/about-us', [AboutusController::class, 'aboutUs'])->name('about-us');
-Route::get('/admin/authors/create', [AuthorController::class, 'create']);
+
+Route::get('/admin/authors/create', [AuthorController::class, 'create'])->name('create');
+Route::post('/admin/authors/save', [AuthorController::class, 'store'])->name('save');
