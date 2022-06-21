@@ -4,7 +4,9 @@ $links = [
     'homepage' => 'Home',
     'about-us' => 'About us',
     'create' => "Create",
-    'create-book' => "Create Book"
+    'create-book' => "Create Book",
+    'register' => "Register",
+    'login' => "Login"
 
 ];
 @endphp
@@ -22,4 +24,21 @@ $links = [
         @endif
 
     @endforeach
+
+    {{-- auth directive --}}
+    @auth
+    <form action="{{route('logout')}}" method="post">
+        @csrf
+        <button>Logout</button>
+    </form>
+    @else
+    <a href="{{route('login')}}">LOGIN</a>
+    @endauth
+    
+    @guest
+    <a href="{{route('register')}}">Register</a>
+    @endguest
+
+    
+
 </nav>

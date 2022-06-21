@@ -8,5 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Book extends Model
 {
     use HasFactory;
-    
+
+    // protected $hidden = [
+    //     'id',
+    //     'created_at'
+    // ]
+    public function authors()
+    {
+        return $this->belongsToMany(Author::class);
+    }
 }
