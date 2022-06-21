@@ -3,7 +3,8 @@
 $links = [
     'homepage' => 'Home',
     'about-us' => 'About us',
-    'create' => "Create"
+    'create' => "Create",
+    'create-book' => "Create Book"
 
 ];
 @endphp

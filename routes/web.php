@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutusController;
 use App\Http\Controllers\Admin\AuthorController;
-
+use App\Http\Controllers\Admin\BookController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,3 +23,7 @@ Route::get('/about-us', [AboutusController::class, 'aboutUs'])->name('about-us')
 
 Route::get('/admin/authors/create', [AuthorController::class, 'create'])->name('create');
 Route::post('/admin/authors/save', [AuthorController::class, 'store'])->name('save');
+
+Route::get('/admin/books',[BookController::class, 'index']);
+Route::get('/admin/books/create',[BookController::class, 'create'])->name('create-book');
+Route::post('/admin/books/save',[BookController::class, 'store'])->name('save-book');
