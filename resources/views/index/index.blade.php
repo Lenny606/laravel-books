@@ -2,9 +2,13 @@
     'current_page' => 'homepage'
 ])
 
-@section('stylesheets')
-    <link rel="stylesheet" href="style.css">
+@section('scripts')
+    <script src="{{ mix('js/latest-books.js') }}" defer></script>
 @endsection
+
+{{-- @section('stylesheets')
+    <link rel="stylesheet" href="style.css">
+@endsection --}}
 
 @section('content')
 

@@ -39,6 +39,8 @@ $links = [
     <a href="{{route('register')}}">Register</a>
     @endguest
 
-    
+    @can("admin")
+    <a href="{{route('admin.home')}}">Admininstration</a>
+    @endcan
 
 </nav>

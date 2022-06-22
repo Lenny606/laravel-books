@@ -31,3 +31,8 @@ Route::post('/admin/authors/save', [AuthorController::class, 'store'])->name('sa
 Route::get('/admin/books',[BookController::class, 'index']);
 Route::get('/admin/books/create',[BookController::class, 'create'])->name('create-book');
 Route::post('/admin/books/save',[BookController::class, 'store'])->name('save-book');
+
+if(\Gate::allows('admin')) {
+    // do some admin stuff
+    return "iser is admin";
+}
