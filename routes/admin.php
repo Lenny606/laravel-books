@@ -16,6 +16,6 @@ Route::get('/admin', [AdminController::class, 'index']);
 Route::get('/admin/edit', [AdminController::class, 'edit']);
 Route::get('/admin/show', [AdminController::class, 'show']);
 Route::get('/admin/store', [AdminController::class, 'store']);
-Route::get('/admin', [AdminController::class, 'index']);
-Route::get('/users', [UserController::class, 'index']);
+Route::get('/admin', [AdminController::class, 'index'])->name('admin.home');
+Route::get('/users', [UserController::class, 'index'])->name('admin.users');
 });

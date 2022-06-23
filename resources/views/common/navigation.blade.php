@@ -6,7 +6,9 @@ $links = [
     'create' => "Create",
     'create-book' => "Create Book",
     'register' => "Register",
-    'login' => "Login"
+    'login' => "Login",
+    
+    
 
 ];
 @endphp
